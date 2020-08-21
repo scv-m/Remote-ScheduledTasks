@@ -1,7 +1,7 @@
 Function Start-RemoteScheduledTask {
     [CmdletBinding()]
     param(
-        [Parameter(ValueFromPipeline,Mandatory = $true)]
+        [Parameter(ValueFromPipeline, Mandatory = $true)]
         [Microsoft.Management.Infrastructure.CimInstance]$ScheduledTask
     )
 
@@ -11,11 +11,11 @@ Function Start-RemoteScheduledTask {
     process {
         Invoke-Command -ComputerName $ScheduledTask.PSComputerName -ScriptBlock {
             param($ScheduledTask)
-                Write-Host "Starting: $($ScheduledTask.TaskName)" -ForegroundColor "Green"
-                $ScheduledTask | Start-ScheduledTask
-            } -ArgumentList $ScheduledTask
-        }
+            Write-Host "Starting: $($ScheduledTask.TaskName)" -ForegroundColor "Green"
+            $ScheduledTask | Start-ScheduledTask
+        } -ArgumentList $ScheduledTask
     }
+}
 
 Function Get-RemoteScheduledTask {
     [CmdletBinding()]
@@ -30,7 +30,7 @@ Function Get-RemoteScheduledTask {
 
     process {
         $Tasks = Invoke-Command -ComputerName $ComputerName -ScriptBlock {
-            Get-ScheduledTask | Where-Object {($_.TaskPath -eq "\") -and ($_.State -Ne "Disabled")}
+            Get-ScheduledTask | Where-Object { ($_.TaskPath -eq "\") -and ($_.State -Ne "Disabled") }
         }
     }
 
@@ -49,7 +49,7 @@ Function Format-RemoteScheduledTasks {
     begin {}
 
     process {
-        ForEach($Index in $Tasks) {
+        ForEach ($Index in $Tasks) {
             Write-Host "$($Tasks.IndexOf($Index)). $($Index.TaskName)"
         }
     }
