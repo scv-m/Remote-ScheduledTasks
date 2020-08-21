@@ -2,9 +2,9 @@
 
 A simple wrapper for PowerShell's [ScheduledTasks](https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/?view=win10-ps) module to run against remote computers
 
-######Supports the following [ScheduledTasks](https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/?view=win10-ps) methods in a limited capacity.
+###### Supports the following [ScheduledTasks](https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/?view=win10-ps) methods in a limited capacity.
 
-✅ Get-ScheduledTask
+✅ Get-ScheduledTask  
 ✅ Start-ScheduledTask
 
 ## Installing
