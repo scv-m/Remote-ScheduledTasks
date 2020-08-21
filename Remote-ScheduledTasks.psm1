@@ -1,3 +1,17 @@
+﻿<#
+ .Synopsis
+  Starts one or more instances of a scheduled task on a remote computer.
+
+ .Description
+  The Start-ScheduledTask cmdlet starts a registered background task asynchronously on a remote computer.
+
+ .Parameter ScheduledTask
+  ScheduleTask Object retrieved from Get-RemoteScheduledTask
+
+ .Example
+  $Tasks = Get-RemoteScheduledTask -ComputerName "SERVER01" -Credential $(Get-Credential)
+  $Tasks[0] | Start-RemoteScheduledTask
+#>
 Function Start-RemoteScheduledTask {
     [CmdletBinding()]
     param(
@@ -17,6 +31,19 @@ Function Start-RemoteScheduledTask {
     }
 }
 
+<#
+ .Synopsis
+  Gets the task definition object of a scheduled task that is registered on a remote computer.
+
+ .Description
+  The Get-RemoteScheduledTask cmdlet gets the task definition object of a scheduled task that is registered on a remote computer.
+
+ .Parameter ComputerName
+  Name of the remote computer
+
+ .Example 
+  Get-RemoteScheduledTask -ComputerName "SERVER01" -Credential $(Get-Credential)
+#>
 Function Get-RemoteScheduledTask {
     [CmdletBinding()]
     param(
