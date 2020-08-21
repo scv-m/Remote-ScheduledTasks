@@ -19,9 +19,9 @@ git clone "https://github.com/scv-m/Remote-ScheduledTasks"
 Import-Module Remote-ScheduledTasks
 
 $Tasks = Get-RemoteScheduledTask -ComputerName "SERVER01" -Credential $(Get-Credential)
-0. User Sync
-1. Computer Sync
+ 0. User Sync
+ 1. Computer Sync
 
 $Tasks[0] | Start-RemoteScheduledTask
-Starting: User Sync
+ Starting: User Sync
 ```
