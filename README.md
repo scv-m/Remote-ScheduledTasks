@@ -10,9 +10,13 @@ A simple wrapper for PowerShell's [ScheduledTasks](https://docs.microsoft.com/en
 ✅ `Start-ScheduledTask`
 
 ## Installing
-
+**Current user**
 ```powershell
 Install-Module -Name RemoteScheduledTasks
+```
+**All users**
+```powershell
+Install-Module -Name RemoteScheduledTasks -Scope AllUsers
 ```
 
 ## Usage
