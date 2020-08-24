@@ -41,7 +41,7 @@
         PSData = @{
 
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags       = @("Scheduled Tasks", "Task Scheduler")
+            Tags = @("ScheduledTasks", "TaskScheduler", "Tasks", "Scheduler")
 
             # A URL to the license for this module.
             LicenseUri = 'https://spdx.org/licenses/MIT.html'
