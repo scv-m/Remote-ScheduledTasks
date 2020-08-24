@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/RemoteScheduledTasks) ![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/RemoteScheduledTasks) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Remote Scheduled Tasks
 
